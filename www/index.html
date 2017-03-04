@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>StopIt - Image Animated Puzzle</title>
+    </head>
+    <body>
+        
+        <div class="view menu bounceIn" id="menu-view">
+            <img class="logo" src="img/logo.png">
+            <button id="start-game">Start Game</button>
+            <button id="continue-game">Continue Game...</button>
+            <button id="select-level">Select Level</button>
+            <button id="load-credits">Credits</button>
+        </div>
+
+        <div class="view levels bounceIn" id="levels-view">
+            <div class="view-header">
+                <button class="simple" id="levels-home">Home</button>
+            </div>
+            <div id="levels-container">
+            </div>
+        </div>
+        
+        <div class="view loading bounceIn" id="loading-view">
+            <div class="center">
+                <span class="loading-text">Loading the Puzzle...</span>
+                <img class="loading-image" id="loading-image" src="">
+            </div>
+        </div>
+
+        <div class="view level bounceIn" id="level-view">
+            <div class="view-header">
+                <button class="simple" id="level-home">Home</button>
+                <div id="lifes-container"></div>
+            </div>
+            <div class="wrong" id="wrong">
+                FAIL
+            </div>
+            <div class="first" id="first"><div class="first-text">Click/Touch to stop the Puzzle</div></div>
+            <div class="alert bounceIn" id="success-alert">
+                <h3>CONGRATULATIONS!!!</h3>
+                <h4 id="new-record">You hit a new record</h4>
+                <p>
+                    <b>Points:</b> <span id="points"></span><br>
+                    <b>Your Record:</b> <span id="record"></span><br>
+                    <b>Elapsed Time:</b> <span id="elapsed-time"></span> secs<br>
+                    <b>Ramaining Lifes:</b> <span id="lifes"></span>
+                </p>
+                <button id="next-level">Next Level</button>
+            </div>
+
+            <div class="alert bounceIn" id="gameover-alert">
+                <h3>GAME OVER!!!</h3>
+            </div>
+            <div class="alert bounceIn" id="play-again-alert">
+                <button id="play-again">Play Again</button>
+            </div>
+
+            <div id="img-container">
+                <a id="stop-it"><canvas id="canvas"></canvas></a>
+            </div>
+
+        </div>
+
+        <div class="view credits bounceIn" id="credits-view">
+            <div class="view-header">
+                <button class="simple" id="credits-home">Home</button>
+            </div>
+            <div id="credits-container">
+                Game Created by: King of Code, <a href="http://kingofcode.com.br">http://kingofcode.com.br</a>
+                <br>
+                King of Code - Software Development (Apps, SaaS, Web-Sites and Chatbots)
+                <br>
+                <br>
+                Musics by:<br><br>
+                
+                "Doobly Doo" Kevin MacLeod (incompetech.com)<br>
+                Licensed under Creative Commons: By Attribution 3.0 License<br>
+                http://creativecommons.org/licenses/by/3.0/<br>
+            </div>
+        </div>
+
+        <audio id="music" loop>
+          <source src="music/doo1.mp3" type="audio/mpeg">
+        </audio>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/libs/puzzle-animator.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/credits.js"></script>
+        <script type="text/javascript" src="js/levels.js"></script>
+        <script type="text/javascript" src="js/level.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
