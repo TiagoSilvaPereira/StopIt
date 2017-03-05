@@ -28,12 +28,16 @@ var Level = {
         return window.localStorage['last_level'] || 1;
     },
 
-    calcPoints: function(current_level, elapsed_time, lifes) {
+    getMaxLevel: function() {
+        return this.max_levels;
+    },
+
+    calcPoints: function(currentLevel, elapsed_time, lifes) {
         var points = 0;
 
-        if(current_level.difficulty == 'easy') points = 100000;
-        if(current_level.difficulty == 'normal') points = 150000;
-        if(current_level.difficulty == 'hard') points = 200000;
+        if(currentLevel.difficulty == 'easy') points = 100000;
+        if(currentLevel.difficulty == 'normal') points = 150000;
+        if(currentLevel.difficulty == 'hard') points = 200000;
 
         points -= elapsed_time;
 
@@ -41,10 +45,10 @@ var Level = {
 
         if(points < 10000) points = 10000;
 
-        points += (Math.random() * 1000) + (2000 - (current_level.speed * 3));
+        points += (Math.random() * 1000) + (2000 - (currentLevel.speed * 3));
         points = Math.floor(points);
 
-        this.saveRecord(current_level.id, points);
+        this.saveRecord(currentLevel.id, points);
 
         return points;
     },
@@ -108,7 +112,7 @@ var LevelController = {
     gameover: false,
     error: false,
     stopped: false,
-    current_level: null,
+    currentLevel: null,
 
     start_time: null,
     final_time: null,
@@ -151,11 +155,12 @@ var LevelController = {
 
     loadLevel: function(level_id) {
         Level.get(level_id, function(level) {
-            this.current_level = level;
+            this.currentLevel = level;
             this.setupAnimator(level);
             this.setupLifes(level);
             this.start_time = new Date();
 
+            this.isLastLevel(level_id);
             app.showView('level-view');
 
         }.bind(this));
@@ -201,7 +206,7 @@ var LevelController = {
         this.restartStates();
         this.hideAlerts();
 
-        this.setupLifes(this.current_level);
+        this.setupLifes(this.currentLevel);
         this.start_time = new Date();
         this.playPuzzle();
     },
@@ -221,8 +226,20 @@ var LevelController = {
     },
 
     nextLevel: function() {
+        var nextLevel = this.currentLevel.id + 1;
         this.restartStates();
-        this.load(this.current_level.id + 1);
+        this.load(nextLevel);
+        this.isLastLevel(nextLevel);
+    },
+
+    isLastLevel: function(level_id) {
+        if(level_id == Level.getMaxLevel()) {
+            utils.showElement('win-game');
+            utils.hideElement('next-level');
+        }else{
+            utils.hideElement('win-game');
+            utils.showElement('next-level');
+        }
     },
 
     stopIt: function() {
@@ -253,7 +270,7 @@ var LevelController = {
     },
 
     verifySuccess: function() {
-        if(puzzleAnimator.getCurrentFrame() == this.current_level.original_frame) {
+        if(puzzleAnimator.getCurrentFrame() == this.currentLevel.original_frame) {
           this.gotSuccess();
         }else{
           this.decreaseLifes();
@@ -268,9 +285,9 @@ var LevelController = {
         this.elapsed_time = this.final_time - this.start_time;
         this.elapsed_time_show = this.elapsed_time / 1000;
         
-        Level.unlockNextLevel(this.current_level.id);
-        this.points = Level.calcPoints(this.current_level, this.elapsed_time, this.lifes);
-        this.record = Level.getRecord(this.current_level.id);
+        Level.unlockNextLevel(this.currentLevel.id);
+        this.points = Level.calcPoints(this.currentLevel, this.elapsed_time, this.lifes);
+        this.record = Level.getRecord(this.currentLevel.id);
 
         this.writeSuccessInformation();
 

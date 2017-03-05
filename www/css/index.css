@@ -34,13 +34,20 @@ canvas {
     height: 65px;
 }
 
+#win-game {
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
 .loading-text {
   display: block;
 }
 
 .loading-image {
   margin-top: 30px;
-  width: 350px;
+  width: 100%;
   border-radius: 8px;
 }
 
@@ -59,6 +66,10 @@ button.simple {
     width: 33%;
     display: inline-block;
     float: left;
+}
+
+button.right {
+  float: right;
 }
 
 .alert {
@@ -82,6 +93,10 @@ button.simple {
 .level-item.active {
     background-color: #f1c40f;
     color: #fff;
+}
+
+#sound-container {
+  float: right;
 }
 
 #lifes-container {
@@ -216,7 +231,7 @@ button.simple {
 }
 
 @media only screen and (min-width: 500px) {
-    canvas {
+    canvas, .loading-image {
         width: 85%;
     }
     .first-text {
@@ -227,7 +242,7 @@ button.simple {
 
 @media only screen and (min-width: 700px) {
     .logo {width: 650px;}
-    canvas {
+    canvas, .loading-image {
         width: 65%;
     }
     .first-text {
@@ -237,7 +252,7 @@ button.simple {
 }
 
 @media only screen and (min-width: 900px) {
-    canvas {
+    canvas, .loading-image {
         width: 50%;
     }
     .first-text {
@@ -247,7 +262,7 @@ button.simple {
 }
 
 @media only screen and (min-width: 1100px) {
-    canvas {
+    canvas, .loading-image {
         width: 45%;
     }
     .first-text {

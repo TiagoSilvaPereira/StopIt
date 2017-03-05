@@ -11,6 +11,9 @@
     <body>
         
         <div class="view menu bounceIn" id="menu-view">
+            <div class="view-header">
+                <button class="simple right" id="toggle-sound">Sounds: ON</button>
+            </div>
             <img class="logo" src="img/logo.png">
             <button id="start-game">Start Game</button>
             <button id="continue-game">Continue Game...</button>
@@ -50,6 +53,9 @@
                     <b>Your Record:</b> <span id="record"></span><br>
                     <b>Elapsed Time:</b> <span id="elapsed-time"></span> secs<br>
                     <b>Ramaining Lifes:</b> <span id="lifes"></span>
+                </p>
+                <p id="win-game">
+                    <b>Fantastic!!! You Win this game!!!! Now, you can try hit new scores!! </b>
                 </p>
                 <button id="next-level">Next Level</button>
             </div>
@@ -92,6 +98,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/libs/puzzle-animator.js"></script>
         <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/sound.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <script type="text/javascript" src="js/credits.js"></script>
         <script type="text/javascript" src="js/levels.js"></script>

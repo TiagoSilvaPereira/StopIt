@@ -4,7 +4,10 @@ var app = {
     music: document.getElementById("music"),
     
     playMusic: function() {
-        this.music.play();
+        var isActive = Sound.isSoundActive();
+        if(isActive) {
+            this.music.play();
+        }
     },
 
     pauseMusic: function() {
