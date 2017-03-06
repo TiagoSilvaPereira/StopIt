@@ -139,7 +139,7 @@ var levels = [
         "id": 18,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 140,
         "pieces": 4
     },
@@ -147,7 +147,7 @@ var levels = [
         "id": 19,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 140,
         "pieces": 4
     },
@@ -155,7 +155,7 @@ var levels = [
         "id": 20,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 140,
         "pieces": 4
     },
@@ -163,7 +163,7 @@ var levels = [
         "id": 21,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 130,
         "pieces": 4
     },
@@ -171,7 +171,7 @@ var levels = [
         "id": 22,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 130,
         "pieces": 4
     },
@@ -179,7 +179,7 @@ var levels = [
         "id": 23,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 130,
         "pieces": 4
     },
@@ -187,7 +187,7 @@ var levels = [
         "id": 24,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 120,
         "pieces": 4
     },
@@ -195,7 +195,7 @@ var levels = [
         "id": 25,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 120,
         "pieces": 4
     },
@@ -203,7 +203,7 @@ var levels = [
         "id": 26,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 120,
         "pieces": 4
     },
@@ -211,7 +211,7 @@ var levels = [
         "id": 27,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 110,
         "pieces": 4
     },
@@ -219,7 +219,7 @@ var levels = [
         "id": 28,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 110,
         "pieces": 4
     },
@@ -227,7 +227,7 @@ var levels = [
         "id": 29,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 110,
         "pieces": 4
     },
@@ -235,7 +235,7 @@ var levels = [
         "id": 30,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 100,
         "pieces": 4
     },
@@ -243,7 +243,7 @@ var levels = [
         "id": 31,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 100,
         "pieces": 4
     },
@@ -251,7 +251,7 @@ var levels = [
         "id": 32,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 100,
         "pieces": 4
     },
@@ -259,7 +259,7 @@ var levels = [
         "id": 33,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 90,
         "pieces": 4
     },
@@ -267,7 +267,7 @@ var levels = [
         "id": 34,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 90,
         "pieces": 4
     },
@@ -275,7 +275,7 @@ var levels = [
         "id": 35,
         "difficulty": "normal",
         "original_frame": 7,
-        "max_frames": 12,
+        "max_frames": 14,
         "speed": 90,
         "pieces": 4
     },
@@ -283,7 +283,7 @@ var levels = [
         "id": 36,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     },
@@ -291,7 +291,7 @@ var levels = [
         "id": 37,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     },
@@ -299,7 +299,7 @@ var levels = [
         "id": 38,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     },
@@ -307,7 +307,7 @@ var levels = [
         "id": 39,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 80,
         "pieces": 5
     },
@@ -315,7 +315,7 @@ var levels = [
         "id": 40,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 80,
         "pieces": 5
     },
@@ -323,7 +323,7 @@ var levels = [
         "id": 41,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 80,
         "pieces": 5
     },
@@ -331,7 +331,7 @@ var levels = [
         "id": 42,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 70,
         "pieces": 5
     },
@@ -339,7 +339,7 @@ var levels = [
         "id": 43,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 70,
         "pieces": 5
     },
@@ -347,7 +347,7 @@ var levels = [
         "id": 44,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 70,
         "pieces": 5
     },
@@ -355,7 +355,7 @@ var levels = [
         "id": 45,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 60,
         "pieces": 5
     },
@@ -363,7 +363,7 @@ var levels = [
         "id": 46,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 60,
         "pieces": 5
     },
@@ -371,7 +371,7 @@ var levels = [
         "id": 47,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 60,
         "pieces": 5
     },
@@ -379,7 +379,7 @@ var levels = [
         "id": 48,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     },
@@ -387,7 +387,7 @@ var levels = [
         "id": 49,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     },
@@ -395,7 +395,7 @@ var levels = [
         "id": 50,
         "difficulty": "hard",
         "original_frame": 7,
-        "max_frames": 13,
+        "max_frames": 16,
         "speed": 90,
         "pieces": 5
     }

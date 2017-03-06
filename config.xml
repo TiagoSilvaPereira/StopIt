@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.kingofcode.stopit" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>StopIt</name>
+    <name>Stop It</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Stop the puzzle at the right time to show the assembled image
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="contato@kingofcode.com.br" href="http://kingofcode.com.br">
+        King of Code Team
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -18,6 +18,12 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
+        <icon src="resources\android\icon\drawable-mdpi-icon.png" density="mdpi"/>
+        <icon src="resources\android\icon\drawable-hdpi-icon.png" density="hdpi"/>
+        <icon src="resources\android\icon\drawable-xhdpi-icon.png" density="xhdpi"/>
+        <icon src="resources\android\icon\drawable-xxhdpi-icon.png" density="xxhdpi"/>
+        <icon src="resources\android\icon\drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

@@ -68,6 +68,10 @@ button.simple {
     float: left;
 }
 
+button.small {
+  font-size: 14px;
+}
+
 button.right {
   float: right;
 }
@@ -82,9 +86,12 @@ button.right {
 
 .level-item {
     padding: 30px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    height: 100px;
     background-color: #eee;
     color: #ddd;
-    text-align: center;
+    text-align: left;
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -93,6 +100,28 @@ button.right {
 .level-item.active {
     background-color: #f1c40f;
     color: #fff;
+}
+
+.level-img {
+  height: 70px;
+}
+
+.level-column {
+  display: inline-block;
+  height: 70px;
+}
+
+.level-item.inactive > .level-column > .level-img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.level-description {
+  padding-left: 10px;
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 15px;
 }
 
 #sound-container {
@@ -268,5 +297,19 @@ button.right {
     .first-text {
         margin-left: 500px;
         margin-right: 500px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .level-item {
+      font-size: 45px;
+    }
+
+    .level-img {
+      height: 45px;
+    }
+
+    .level-description {
+      font-size: 13px;
     }
 }

@@ -88,11 +88,17 @@ var LevelsController = {
         levelsContainer.innerHTML = '';
 
         levels.forEach(function(level) {
+
             var levelDiv = document.createElement('div');
-            levelDiv.innerHTML = level.id;
+            levelDiv.innerHTML = LevelsController.makeLevelItem(level);
             levelDiv.level = level.id;
             levelDiv.classList.add('level-item');
-            if(level.id <= Level.getLastLevel()) levelDiv.classList.add('active');
+            
+            if(level.id <= Level.getLastLevel()){
+                levelDiv.classList.add('active')
+            } else {
+                levelDiv.classList.add('inactive')
+            };
 
             levelDiv.addEventListener('click', function(){
                 if(this.level > Level.getLastLevel()) return;
@@ -101,6 +107,19 @@ var LevelsController = {
 
             levelsContainer.appendChild(levelDiv);
         })
+    },
+
+    makeLevelItem: function(level) {
+        var html =
+               '<div class="level-column">' + level.id + 
+               '. <img class="level-img" src="' + 'img/levels/'  + level.id + '.jpg' + '">' +
+               '</div>' +
+               '<div class="level-column level-description">'+
+               '<b>Difficulty:</b> ' + level.difficulty + '<br>' +
+               '<b>Your Score:</b> ' + Level.getRecord(level.id) +
+               '</div>';
+
+        return html;
     }
 
 }
@@ -142,6 +161,7 @@ var LevelController = {
         this.restartStates();
         this.hideAlerts();
 
+        this.prepareAds(level_id);
         app.pauseMusic();
         app.showView('loading-view');
         document.getElementById('loading-image').src = 'img/levels/'  + level_id + '.jpg';
@@ -150,7 +170,14 @@ var LevelController = {
             app.playMusic();
             this.loadLevel(level_id);
         }.bind(this), 2500);
+    },
 
+    prepareAds: function(level_id) {
+        if((level_id % 3) == 0) app.prepareInterstitial();
+    },
+
+    showAds: function(level_id) {
+        if((level_id % 3) == 0) app.showInterstitial();
     },
 
     loadLevel: function(level_id) {
@@ -226,6 +253,7 @@ var LevelController = {
     },
 
     nextLevel: function() {
+        this.showAds(this.currentLevel.id);
         var nextLevel = this.currentLevel.id + 1;
         this.restartStates();
         this.load(nextLevel);
